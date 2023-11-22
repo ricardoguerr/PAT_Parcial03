@@ -122,7 +122,10 @@ namespace HojaDeTrabajo03Tests {
 				<< (op->type == VOID_TYPE ? std::to_string(op->timestamp) : "")
 				<< ")" << std::endl;
 
-			string actualResult = timeMapOps.at(op->funcName)(timeMap, op);
+			string actualResult = "";
+
+			ASSERT_DURATION_LE(100,
+				actualResult = timeMapOps.at(op->funcName)(timeMap, op););
 
 			if (op->type == FUNC_TYPE) {
 				ASSERT_EQ(actualResult, op->expected) << "Error al llamar la instruccion [" << i << "] -> " 
