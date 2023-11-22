@@ -44,12 +44,6 @@ namespace HojaDeTrabajo03Tests {
 			int count = lists.size();
 			
 			vector<vector<int>> result(lists.begin(), lists.end()); 
-			/*result.reserve(count);
-
-			for (const auto& list : lists) {
-				vector<int> r(list.begin(), list.end());
-				result.push_back(r);
-			}*/
 
 			while (count > 1) {
 				for (int i = 0; i < count / 2; ++i) {
@@ -134,7 +128,7 @@ namespace HojaDeTrabajo03Tests {
 		Node<int>* head = nullptr;
 		
 		ASSERT_DURATION_LE(100,
-			head = e01->mergeLists(lists, param.size()););
+			head = e01->mergeLists(lists););
 
 		int i = 0;
 		int size = expectedHead.size();

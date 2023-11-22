@@ -5,6 +5,6 @@
 class Ejercicio01
 {
 public:
-	Node<int>* mergeLists(Node<Node<int>*>* lists, int count);
+	Node<int>* mergeLists(Node<Node<int>*>* lists);
 };
 
