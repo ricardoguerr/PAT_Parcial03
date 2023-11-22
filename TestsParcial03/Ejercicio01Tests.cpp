@@ -63,11 +63,9 @@ namespace HojaDeTrabajo03Tests {
 
 			return result[0];
 		}
-	public:
-		static vector<tuple<vector<vector<int>>, vector<int>>> ReadParams() {
-			vector<tuple<vector<vector<int>>, vector<int>>> params;
-
-			std::ifstream paramsFile("e01.csv");
+	
+		static void readFromFile(string filepath, vector<tuple<vector<vector<int>>, vector<int>>>& params) {
+			std::ifstream paramsFile(filepath);
 			string line;
 			while (std::getline(paramsFile, line)) {
 				std::stringstream pipeStream(line);
@@ -90,6 +88,17 @@ namespace HojaDeTrabajo03Tests {
 
 				params.push_back({ lists, expectedResult });
 			}
+		}
+
+	public:
+		static vector<tuple<vector<vector<int>>, vector<int>>> ReadParams() {
+			vector<tuple<vector<vector<int>>, vector<int>>> params;
+
+			readFromFile("e01a.csv", params);
+			readFromFile("e01b.csv", params);
+
+			std::ifstream paramsFile("e01.csv");
+			string line;
 
 			return params;
 		}
