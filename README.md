@@ -4,9 +4,9 @@
   - [Instrucciones](#instrucciones)
   - [Introducción](#introducción)
   - [Ejercicio 1 (35 puntos)](#ejercicio-1-35-puntos)
-  - [Ejemplo 1.1](#ejemplo-11)
-  - [Ejemplo 1.2](#ejemplo-12)
-  - [Ejemplo 1.3](#ejemplo-13)
+    - [Ejemplo 1.1](#ejemplo-11)
+    - [Ejemplo 1.2](#ejemplo-12)
+    - [Ejemplo 1.3](#ejemplo-13)
     - [Restricciones](#restricciones)
   - [Ejercicio 2 (30 puntos)](#ejercicio-2-30-puntos)
     - [Ejemplo 2.1](#ejemplo-21)
@@ -55,19 +55,19 @@ Dada una lista enlazada de listas enlazadas de números enteros `lists`, en dond
 
 Mezcle todas las listas enlazadas en una sola lista enlazada ordenada descendentemente y retornela.
 
-## Ejemplo 1.1
+### Ejemplo 1.1
 
     lists = [[5 -> 4 -> 1] -> [4 -> 3 -> 1] -> [6 -> 2]
     resultado = [6 -> 5 -> 4 -> 4 -> 3 -> 2 -> 1 -> 1]
 ___
 
-## Ejemplo 1.2
+### Ejemplo 1.2
 
     lists = []
     resultado = []
 ___
 
-## Ejemplo 1.3
+### Ejemplo 1.3
 
     lists = [[100]]
     resultado = [100]
