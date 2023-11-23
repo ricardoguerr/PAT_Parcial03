@@ -75,9 +75,11 @@ namespace Parcial03Tests {
 		ASSERT_DURATION_LE(300,
 			actualResult = e02->findRepeatedDnaSequences(head););
 
+		if (!actualResult) actualResult = new vector<string>();
+
 		int i = 0;
 		int expectedSize = expectedResult.size();
-		int actualSize = actualResult ? actualResult->size() : 0;
+		int actualSize = actualResult->size();
 
 		std::sort(expectedResult.begin(), expectedResult.end());
 		std::sort(actualResult->begin(), actualResult->end());

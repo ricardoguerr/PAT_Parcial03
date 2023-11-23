@@ -62,18 +62,18 @@ jobs:
       run: |
        vstest.console.exe /Parallel /TestAdapterPath:GoogleTestAdapter.0.18.0\build\_common /TestCaseFilter:"FullyQualifiedName~E01" .\${{env.BUILD_CONFIGURATION}}\${{env.OUTPUT_EXE}} > ${{env.E01_LOG_FILE}}
        cat ${{env.E01_LOG_FILE}}
+       
+    - name: Tests E02
+      if: success() || failure()
+      run: |
+       vstest.console.exe /Parallel /TestAdapterPath:GoogleTestAdapter.0.18.0\build\_common /TestCaseFilter:"FullyQualifiedName~E02" .\${{env.BUILD_CONFIGURATION}}\${{env.OUTPUT_EXE}} > ${{env.E02_LOG_FILE}}
+       cat ${{env.E02_LOG_FILE}}
     
     - name: Tests E03
       if: success() || failure()
       run: |
        vstest.console.exe /Parallel /TestAdapterPath:GoogleTestAdapter.0.18.0\build\_common /TestCaseFilter:"FullyQualifiedName~E03" .\${{env.BUILD_CONFIGURATION}}\${{env.OUTPUT_EXE}} > ${{env.E03_LOG_FILE}}
        cat ${{env.E03_LOG_FILE}}
-
-    - name: Tests E02
-      if: success() || failure()
-      run: |
-       vstest.console.exe /Parallel /TestAdapterPath:GoogleTestAdapter.0.18.0\build\_common /TestCaseFilter:"FullyQualifiedName~E02" .\${{env.BUILD_CONFIGURATION}}\${{env.OUTPUT_EXE}} > ${{env.E02_LOG_FILE}}
-       cat ${{env.E02_LOG_FILE}}
 
     - name: Results
       if: success() || failure()
