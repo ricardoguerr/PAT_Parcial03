@@ -77,7 +77,7 @@ namespace Parcial03Tests {
 
 		int i = 0;
 		int expectedSize = expectedResult.size();
-		int actualSize = actualResult->size();
+		int actualSize = actualResult ? actualResult->size() : 0;
 
 		std::sort(expectedResult.begin(), expectedResult.end());
 		std::sort(actualResult->begin(), actualResult->end());
