@@ -119,7 +119,7 @@ namespace Parcial03Tests {
 		Node<int>* aux;
 
 		for (const auto& l : list) {
-			Node<int>* aux = buildList(l);
+			aux = buildList(l);
 			*it = new Node<Node<int>*>{ aux };
 			it = &((*it)->next);
 		}

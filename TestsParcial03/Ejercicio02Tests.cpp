@@ -81,6 +81,8 @@ namespace Parcial03Tests {
 		int expectedSize = expectedResult.size();
 		int actualSize = actualResult->size();
 
+		ASSERT_EQ(expectedSize, actualSize) << "La cantidad de resultados no es la esperada.";
+
 		std::sort(expectedResult.begin(), expectedResult.end());
 		std::sort(actualResult->begin(), actualResult->end());
 
@@ -88,8 +90,6 @@ namespace Parcial03Tests {
 			ASSERT_EQ(expectedResult[i], (*actualResult)[i]) << "Error en la posicion [" << i << "] del resultado"
 				<< ". Se esperaba [" << expectedResult[i] << "], pero se encontro [" << (*actualResult)[i];
 		}
-
-		ASSERT_EQ(expectedSize, actualSize) << "La cantidad de resultados no es la esperada.";
 	}
 
 	INSTANTIATE_TEST_CASE_P(E02DNA, E02Tests, ValuesIn(E02Tests::ReadParams()));
