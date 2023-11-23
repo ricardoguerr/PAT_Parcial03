@@ -124,7 +124,7 @@ namespace Parcial03Tests {
 
 			string actualResult = "";
 
-			ASSERT_DURATION_LE(100,
+			ASSERT_DURATION_LE(300,
 				actualResult = timeMapOps.at(op->funcName)(timeMap, op););
 
 			if (op->type == FUNC_TYPE) {

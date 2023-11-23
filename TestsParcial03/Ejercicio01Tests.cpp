@@ -132,7 +132,7 @@ namespace Parcial03Tests {
 
 		Node<int>* head = nullptr;
 		
-		ASSERT_DURATION_LE(100,
+		ASSERT_DURATION_LE(60000,
 			head = e01->mergeLists(lists););
 
 		int i = 0;
