@@ -97,7 +97,7 @@ namespace HojaDeTrabajo03Tests {
 				else {
 					op->value = "";
 					op->timestamp = std::stoi(valueOrTimestamp);
-					op->expected = timestampOrExpected;
+					op->expected = (timestampOrExpected == "-" ? "" : timestampOrExpected);
 					op->type = FUNC_TYPE;
 				}
 

@@ -7,7 +7,7 @@ get,foo,5,bar2
 
 set,love,high,10
 set,love,low,20
-get,love,5,
+get,love,5,-
 get,love,10,high
 get,love,15,high
 get,love,20,low
