@@ -158,13 +158,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="e01.csv">
-      <FileType>Document</FileType>
-    </CopyFileToFolders>
     <CopyFileToFolders Include="e02.csv">
       <FileType>Document</FileType>
     </CopyFileToFolders>
     <CopyFileToFolders Include="e03.csv">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="e01a.csv">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="e01b.csv">
       <FileType>Document</FileType>
     </CopyFileToFolders>
     <None Include="packages.config" />

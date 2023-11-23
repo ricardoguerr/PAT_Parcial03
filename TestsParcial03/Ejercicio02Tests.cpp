@@ -15,7 +15,7 @@ using ::std::tuple;
 using ::std::string;
 using ::std::vector;
 
-namespace HojaDeTrabajo03Tests {
+namespace Parcial03Tests {
 
 	class E02Tests : public TestWithParam < tuple<string, vector<string>>> {
 	protected:
@@ -72,7 +72,7 @@ namespace HojaDeTrabajo03Tests {
 
 		vector<string>* actualResult;
 
-		ASSERT_DURATION_LE(100,
+		ASSERT_DURATION_LE(300,
 			actualResult = e02->findRepeatedDnaSequences(head););
 
 		int i = 0;

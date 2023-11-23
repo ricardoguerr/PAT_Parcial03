@@ -16,7 +16,7 @@ using ::std::string;
 using ::std::vector;
 using ::std::unordered_map;
 
-namespace HojaDeTrabajo03Tests {
+namespace Parcial03Tests {
 
 	const char FUNC_TYPE = 'F';
 	const char VOID_TYPE = 'V';

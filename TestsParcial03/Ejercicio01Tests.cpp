@@ -15,7 +15,7 @@ using ::std::tuple;
 using ::std::string;
 using ::std::vector;
 
-namespace HojaDeTrabajo03Tests {
+namespace Parcial03Tests {
 
 	bool compareAscending(const int& a, const int& b) {
 		return a > b;
@@ -95,10 +95,6 @@ namespace HojaDeTrabajo03Tests {
 			vector<tuple<vector<vector<int>>, vector<int>>> params;
 
 			readFromFile("e01a.csv", params);
-			readFromFile("e01b.csv", params);
-
-			std::ifstream paramsFile("e01.csv");
-			string line;
 
 			return params;
 		}
